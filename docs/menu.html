@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Neighborhood Café | Menu</title>
+    <meta
+      name="description"
+      content="Menu highlights: coffee, pastries, breakfast and lunch favorites."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="nav">
+      <div class="container nav-inner">
+        <a class="brand" href="index.html">
+          <span class="brand-badge"></span>
+          <span>Neighborhood Café</span>
+        </a>
+
+        <div class="nav-right">
+          <!-- Desktop navigation -->
+          <nav class="nav-links" aria-label="Primary">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="menu.html" class="active">Menu</a>
+            <a href="visit.html">Visit</a>
+          </nav>
+
+          <!-- Desktop CTA -->
+          <div class="nav-cta">
+            <a class="btn primary" href="visit.html#contact">Contact</a>
+          </div>
+
+          <!-- Hamburger -->
+          <button
+            class="hamburger"
+            aria-label="Toggle menu"
+            aria-expanded="false"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile menu (NEW) -->
+      <nav class="mobile-menu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="menu.html">Menu</a>
+        <a href="visit.html">Visit</a>
+        <a class="btn primary" href="visit.html#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main class="section">
+      <div class="container">
+        <div class="hero-card">
+          <div class="kicker">Menu</div>
+          <h1>Our Highlights</h1>
+          <p class="lead">
+            A short list of favorites. Our offerings rotate seasonally and
+            daily.
+          </p>
+        </div>
+
+        <div class="menu-grid" style="margin-top: 18px">
+          <!-- Coffee & Espresso: The Classics -->
+          <div class="card menu-card">
+            <div class="menu-image img-menu-classics"></div>
+            <div class="badge">Coffee & Espresso</div>
+            <h2 style="margin-top: 10px">The Classics</h2>
+            <ul class="list">
+              <li>
+                <strong>Espresso</strong>
+                <div class="small">Bold, bright, perfectly pulled.</div>
+              </li>
+              <li>
+                <strong>Americano</strong>
+                <div class="small">
+                  Our espresso with hot water, smooth and strong.
+                </div>
+              </li>
+              <li>
+                <strong>Cappuccino</strong>
+                <div class="small">
+                  Equal parts espresso, steamed milk, and foam.
+                </div>
+              </li>
+              <li>
+                <strong>Latte</strong>
+                <div class="small">
+                  Creamy, comforting, endlessly customizable.
+                </div>
+              </li>
+              <li>
+                <strong>Flat White</strong>
+                <div class="small">Velvety microfoam with a double shot.</div>
+              </li>
+              <li>
+                <strong>Cortado</strong>
+                <div class="small">
+                  Equal parts espresso and steamed milk, perfectly balanced.
+                </div>
+              </li>
+              <li>
+                <strong>Macchiato</strong>
+                <div class="small">Espresso marked with a dollop of foam.</div>
+              </li>
+            </ul>
+            <div class="note" style="margin-top: 14px">
+              All coffee available with dairy, oat, almond, or soy milk.
+            </div>
+          </div>
+
+          <!-- Coffee & Espresso: Signature Drinks -->
+          <div class="card menu-card">
+            <div class="menu-image img-menu-signature"></div>
+            <div class="badge">Coffee & Espresso</div>
+            <h2 style="margin-top: 10px">Our Signature Drinks</h2>
+            <ul class="list">
+              <li>
+                <strong>Morning Ritual</strong>
+                <div class="small">House latte + cinnamon & brown sugar.</div>
+              </li>
+              <li>
+                <strong>Golden Hour Latte</strong>
+                <div class="small">
+                  Vanilla bean, caramel, whisper of sea salt
+                  <em>(best at 3 PM)</em>.
+                </div>
+              </li>
+              <li>
+                <strong>The James</strong>
+                <div class="small">
+                  Double espresso over ice with house-made vanilla cream.
+                </div>
+              </li>
+              <li>
+                <strong>Cardamom Cloud</strong>
+                <div class="small">
+                  Cardamom + honey latte, topped with airy foam.
+                </div>
+              </li>
+              <li>
+                <strong>Maple Fog</strong>
+                <div class="small">
+                  Earl Grey tea latte + real maple syrup + steamed oat milk.
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Drip & Pour Over (FULL WIDTH) -->
+          <div class="card menu-card full">
+            <div class="menu-image img-menu-drip"></div>
+            <div class="badge">Drip & Pour Over</div>
+            <h2 style="margin-top: 10px">Fresh Daily</h2>
+            <ul class="list">
+              <li>
+                <strong>Morning Ritual Blend</strong>
+                <div class="small">
+                  Medium roast: chocolatey + caramel + hazelnut notes.
+                </div>
+              </li>
+              <li>
+                <strong>Single Origin Rotating</strong>
+                <div class="small">Ask about this week’s featured coffee.</div>
+              </li>
+              <li>
+                <strong>Cold Brew</strong>
+                <div class="small">
+                  Steeped 16 hours, smooth and never bitter.
+                </div>
+              </li>
+              <li>
+                <strong>Nitro Cold Brew</strong>
+                <div class="small">Creamy, cascading, naturally sweet.</div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Breakfast: Pastries -->
+          <div class="card menu-card">
+            <div class="menu-image img-menu-pastries"></div>
+            <div class="badge">Breakfast</div>
+            <h2 style="margin-top: 10px">Carla’s Pastries</h2>
+            <div class="small">Baked fresh at 4 AM every morning.</div>
+            <ul class="list" style="margin-top: 10px">
+              <li>
+                <strong>Honey Cardamom Croissant</strong>
+                <div class="small">Flaky, buttery, honey-cardamom glaze.</div>
+              </li>
+              <li>
+                <strong>Sourdough Chocolate Croissant</strong>
+                <div class="small">
+                  Dark chocolate batons + sourdough lamination.
+                </div>
+              </li>
+              <li>
+                <strong>Blueberry Lemon Scone</strong>
+                <div class="small">
+                  Bright lemon zest, local blueberries in season.
+                </div>
+              </li>
+              <li>
+                <strong>Cinnamon Morning Bun</strong>
+                <div class="small">Sticky, spiced, impossible to share.</div>
+              </li>
+              <li>
+                <strong>Seasonal Muffin</strong>
+                <div class="small">
+                  Changes weekly based on farmers’ market finds.
+                </div>
+              </li>
+            </ul>
+            <div class="note" style="margin-top: 14px">
+              Served until 11:30 AM weekdays, all day weekends.
+            </div>
+          </div>
+
+          <!-- Breakfast: Sandwiches -->
+          <div class="card menu-card">
+            <div class="menu-image img-menu-breakfast"></div>
+            <div class="badge">Breakfast</div>
+            <h2 style="margin-top: 10px">Breakfast Sandwiches</h2>
+            <ul class="list">
+              <li>
+                <strong>The Early Bird</strong>
+                <div class="small">
+                  Scrambled eggs, aged cheddar, chives on house sourdough.
+                </div>
+              </li>
+              <li>
+                <strong>Sunrise Stack</strong>
+                <div class="small">
+                  Fried egg, bacon, arugula, sriracha aioli on a croissant.
+                </div>
+              </li>
+              <li>
+                <strong>Garden Morning</strong>
+                <div class="small">
+                  Roasted veg, herbed goat cheese, pesto on multigrain.
+                </div>
+              </li>
+              <li>
+                <strong>Maple Sausage Biscuit</strong>
+                <div class="small">
+                  House sausage + Vermont cheddar on buttermilk biscuit.
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Breakfast: Bowls & Plates (FULL WIDTH) -->
+          <div class="card menu-card full">
+            <div class="menu-image img-menu-bowls"></div>
+            <div class="badge">Breakfast</div>
+            <h2 style="margin-top: 10px">Bowls & Plates</h2>
+            <ul class="list">
+              <li>
+                <strong>Farmers’ Market Granola Bowl</strong>
+                <div class="small">
+                  House granola, Greek yogurt, seasonal fruit, local honey.
+                </div>
+              </li>
+              <li>
+                <strong>Avocado Toast</strong>
+                <div class="small">
+                  Smashed avocado, heirloom tomatoes, everything seasoning on
+                  sourdough.
+                </div>
+              </li>
+              <li>
+                <strong>Weekend Waffle</strong>
+                <div class="small">
+                  Belgian waffle + whipped butter + real maple syrup (weekends
+                  only).
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Lunch: Sandwiches & Toasts -->
+          <div class="card menu-card">
+            <div class="menu-image img-menu-lunch"></div>
+            <div class="badge">Lunch</div>
+            <h2 style="margin-top: 10px">Sandwiches & Toasts</h2>
+            <div class="small">
+              All on house-made bread. Available from 11 AM.
+            </div>
+            <ul class="list" style="margin-top: 10px">
+              <li>
+                <strong>Corner Booth</strong>
+                <div class="small">
+                  Turkey, apple butter, brie, arugula on sourdough.
+                </div>
+              </li>
+              <li>
+                <strong>The Maria</strong>
+                <div class="small">
+                  Prosciutto, fresh mozzarella, basil, balsamic glaze on
+                  ciabatta.
+                </div>
+              </li>
+              <li>
+                <strong>Roasted Veggie</strong>
+                <div class="small">
+                  Seasonal veg, hummus, tahini drizzle on multigrain.
+                </div>
+              </li>
+              <li>
+                <strong>Tuna Melt</strong>
+                <div class="small">
+                  House tuna salad + sharp cheddar on grilled sourdough.
+                </div>
+              </li>
+              <li>
+                <strong>Grilled Cheese Trio</strong>
+                <div class="small">
+                  Three cheeses + caramelized onions on buttered sourdough.
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Lunch: Salads & Soup -->
+          <div class="card menu-card">
+            <div class="menu-image img-menu-salads"></div>
+            <div class="badge">Lunch</div>
+            <h2 style="margin-top: 10px">Salads & Soup</h2>
+            <ul class="list">
+              <li>
+                <strong>Market Greens</strong>
+                <div class="small">
+                  Mixed greens, seasonal vegetables, house vinaigrette.
+                </div>
+              </li>
+              <li>
+                <strong>Caesar of the Day</strong>
+                <div class="small">
+                  Romaine, parmesan, house croutons, classic-style dressing.
+                </div>
+              </li>
+              <li>
+                <strong>Harvest Bowl</strong>
+                <div class="small">
+                  Roasted sweet potato, quinoa, chickpeas, tahini dressing.
+                </div>
+              </li>
+              <li>
+                <strong>Weekly Soup</strong>
+                <div class="small">
+                  Changes every Monday, served with sourdough.
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Treats & Extras (FULL WIDTH) -->
+          <div class="card menu-card full">
+            <div class="menu-image img-menu-treats"></div>
+            <div class="badge">Treats & Extras</div>
+            <h2 style="margin-top: 10px">Sweet Things</h2>
+            <ul class="list">
+              <li>
+                <strong>Carla’s Cookie of the Day</strong>
+                <div class="small">
+                  Because sometimes you just need a cookie.
+                </div>
+              </li>
+              <li>
+                <strong>Brownie</strong>
+                <div class="small">Fudgy, not cakey.</div>
+              </li>
+              <li>
+                <strong>Seasonal Cake Slice</strong>
+                <div class="small">Ask what’s available today.</div>
+              </li>
+              <li>
+                <strong>Biscotti</strong>
+                <div class="small">
+                  Perfect for dunking in your afternoon coffee.
+                </div>
+              </li>
+            </ul>
+
+            <h2 style="margin-top: 18px">Add-Ons</h2>
+            <ul class="list">
+              <li><strong>Extra espresso shot</strong></li>
+              <li><strong>Alternative milk</strong></li>
+              <li>
+                <strong>Flavor shot</strong>
+                <div class="small">Vanilla, caramel, hazelnut, lavender.</div>
+              </li>
+              <li>
+                <strong>Extra cheese / avocado / bacon</strong>
+                <div class="small">For sandwiches.</div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Non-Coffee Beverages -->
+          <div class="card menu-card">
+            <div class="menu-image img-menu-tea"></div>
+            <div class="badge">Beverages (Non-Coffee)</div>
+            <h2 style="margin-top: 10px">Tea</h2>
+            <div class="small">Premium loose-leaf selection.</div>
+            <ul class="list" style="margin-top: 10px">
+              <li><strong>English Breakfast</strong></li>
+              <li><strong>Earl Grey</strong></li>
+              <li><strong>Green Tea</strong></li>
+              <li><strong>Chamomile</strong></li>
+              <li><strong>Peppermint</strong></li>
+              <li><strong>Seasonal Blend</strong></li>
+            </ul>
+          </div>
+
+          <div class="card menu-card">
+            <div class="menu-image img-menu-drinks"></div>
+            <div class="badge">Beverages (Non-Coffee)</div>
+            <h2 style="margin-top: 10px">Other Drinks</h2>
+            <ul class="list">
+              <li>
+                <strong>House-Made Lemonade</strong>
+                <div class="small">
+                  Real lemons, real sugar, real refreshing.
+                </div>
+              </li>
+              <li>
+                <strong>Italian Soda</strong>
+                <div class="small">Sparkling water + house-made syrup.</div>
+              </li>
+              <li>
+                <strong>Hot Chocolate</strong>
+                <div class="small">
+                  Real melted chocolate (not powder) + whipped cream.
+                </div>
+              </li>
+              <li>
+                <strong>Steamed Milk</strong>
+                <div class="small">
+                  For kids (and anyone else who wants it).
+                </div>
+              </li>
+              <li>
+                <strong>Fresh Juice</strong>
+                <div class="small">Orange or seasonal selection.</div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Kids Menu (FULL WIDTH) -->
+          <div class="card menu-card full">
+            <div class="menu-image img-menu-kids"></div>
+            <div class="badge">Kids Menu</div>
+            <h2 style="margin-top: 10px">
+              For future coffee lovers (12 & under)
+            </h2>
+            <ul class="list">
+              <li>
+                <strong>Special Milk</strong>
+                <div class="small">Steamed milk with a tiny bit of honey.</div>
+              </li>
+              <li>
+                <strong>Grilled Cheese Triangle</strong>
+                <div class="small">On sourdough + fruit.</div>
+              </li>
+              <li>
+                <strong>PB&J</strong>
+                <div class="small">Classic on white or wheat.</div>
+              </li>
+              <li><strong>Cookie & Milk</strong></li>
+            </ul>
+          </div>
+
+          <!-- Closing note -->
+          <div class="card menu-card full">
+            <div class="note">
+              Prices available at the counter. Ask about daily specials and
+              seasonal offerings.
+            </div>
+            <p
+              style="
+                margin-top: 14px;
+                display: flex;
+                gap: 12px;
+                flex-wrap: wrap;
+              "
+            >
+              <a class="btn primary" href="visit.html">Come Visit</a>
+              <a class="btn" href="visit.html#contact">Ask a Question</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-flex">
+        <div class="footer-grid1">
+          <strong>Neighborhood Café</strong>
+          <div class="small">Good coffee. Good company.</div>
+        </div>
+        <div class="footer-grid2">
+          <div class="footer-icons">
+            <a href="mailto:hello@yourcafe.com" aria-label="Email">
+              <!-- Email -->
+              <svg viewBox="0 0 24 24">
+                <path d="M2 4h20v16H2z" fill="none" />
+                <path d="M2 6l10 7L22 6" />
+              </svg>
+            </a>
+
+            <a href="tel:+1234567890" aria-label="Telephone">
+              <!-- Phone -->
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2
+      19.8 19.8 0 0 1-8.63-3.07
+      19.5 19.5 0 0 1-6-6
+      19.8 19.8 0 0 1-3.07-8.67
+      A2 2 0 0 1 4.11 2h3
+      a2 2 0 0 1 2 1.72
+      12.8 12.8 0 0 0 .7 2.81
+      a2 2 0 0 1-.45 2.11L8.09 9.91
+      a16 16 0 0 0 6 6l1.27-1.27
+      a2 2 0 0 1 2.11-.45
+      12.8 12.8 0 0 0 2.81.7
+      A2 2 0 0 1 22 16.92z"
+                />
+              </svg>
+            </a>
+
+            <a href="#" aria-label="Instagram">
+              <!-- Instagram -->
+              <svg viewBox="0 0 24 24">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                <circle cx="12" cy="12" r="4" />
+                <circle cx="18" cy="6" r="1" />
+              </svg>
+            </a>
+
+            <a href="#" aria-label="Facebook">
+              <!-- Facebook -->
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7
+      a1 1 0 0 1 1-1h3z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
