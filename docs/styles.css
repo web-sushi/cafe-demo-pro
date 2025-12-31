@@ -111,6 +111,18 @@ a:hover {
   background: #ffffff;
   font-weight: 600;
   color: var(--espresso);
+  transition: all 0.2s ease;
+}
+.btn.primary,
+.btn-primary {
+  background: linear-gradient(135deg, var(--espresso), var(--saddle));
+  color: #ffffff;
+  border-color: transparent;
+}
+.btn.primary:hover,
+.btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(59, 47, 47, 0.2);
 }
 .btn.link {
   background: transparent;
@@ -585,5 +597,434 @@ textarea {
   }
   .mobile-menu.open {
     display: flex;
+  }
+}
+
+/* ============================================
+   PREMIUM RESERVATION UI
+   ============================================ */
+
+.reservation-card {
+  background: #ffffff;
+  border: 1px solid var(--silver);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 40px;
+  margin-top: 24px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.reservation-header {
+  text-align: center;
+  margin-bottom: 36px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid var(--line);
+}
+
+.reservation-form {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.reservation-step {
+  animation: fadeIn 0.4s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.step-label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--text);
+  margin-bottom: 16px;
+}
+
+.step-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--espresso), var(--saddle));
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+/* Date Picker */
+.date-picker-wrapper {
+  position: relative;
+}
+
+.date-input {
+  width: 100%;
+  padding: 16px 18px;
+  border-radius: 12px;
+  border: 2px solid var(--silver);
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  background: #ffffff;
+  color: var(--text);
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.date-input:hover {
+  border-color: var(--saddle);
+}
+
+.date-input:focus {
+  outline: none;
+  border-color: var(--saddle);
+  box-shadow: 0 0 0 3px rgba(139, 94, 60, 0.1);
+}
+
+.date-input:invalid {
+  border-color: var(--silver);
+}
+
+.date-status {
+  margin-top: 10px;
+  font-size: 13px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  display: none;
+}
+
+.date-status.show {
+  display: block;
+}
+
+.date-status.available {
+  background: #f0f7f0;
+  color: #2d5a2d;
+  border: 1px solid #c8e6c8;
+}
+
+.date-status.limited {
+  background: #fff8e6;
+  color: #8b6914;
+  border: 1px solid #ffe4b5;
+}
+
+.date-status.unavailable {
+  background: #f5f5f5;
+  color: var(--muted);
+  border: 1px solid var(--silver);
+}
+
+/* Time Slots */
+.time-slots {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.time-slot {
+  padding: 14px 16px;
+  border: 2px solid var(--silver);
+  border-radius: 10px;
+  background: #ffffff;
+  font-weight: 500;
+  font-size: 15px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: var(--text);
+  position: relative;
+}
+
+.time-slot:hover:not(.disabled):not(.booked) {
+  border-color: var(--saddle);
+  background: #faf7f2;
+  transform: translateY(-2px);
+}
+
+.time-slot.selected {
+  border-color: var(--saddle);
+  background: linear-gradient(135deg, var(--espresso), var(--saddle));
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(139, 94, 60, 0.25);
+}
+
+.time-slot.limited {
+  border-color: #ffd700;
+  background: #fff8e6;
+  position: relative;
+}
+
+.time-slot.limited::after {
+  content: "Few left";
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: #ffd700;
+  color: var(--espresso);
+  font-size: 9px;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.time-slot.booked {
+  background: #f5f5f5;
+  color: var(--muted);
+  border-color: #e0e0e0;
+  cursor: not-allowed;
+  opacity: 0.6;
+  position: relative;
+}
+
+.time-slot.booked::after {
+  content: "Full";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.time-slot.disabled {
+  background: #fafafa;
+  color: #d0d0d0;
+  border-color: #e8e8e8;
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+/* Guest Selector */
+.guest-selector {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  justify-content: center;
+  margin-top: 8px;
+}
+
+.guest-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 2px solid var(--silver);
+  background: #ffffff;
+  font-size: 24px;
+  font-weight: 300;
+  color: var(--text);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.guest-btn:hover:not(:disabled) {
+  border-color: var(--saddle);
+  background: #faf7f2;
+  transform: scale(1.05);
+}
+
+.guest-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.guest-input {
+  width: 80px;
+  padding: 16px;
+  border: 2px solid var(--silver);
+  border-radius: 12px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text);
+  background: #ffffff;
+  cursor: default;
+}
+
+.guest-input:focus {
+  outline: none;
+  border-color: var(--saddle);
+  box-shadow: 0 0 0 3px rgba(139, 94, 60, 0.1);
+}
+
+/* Form Fields */
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--text);
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 14px 16px;
+  border: 2px solid var(--silver);
+  border-radius: 10px;
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  background: #ffffff;
+  color: var(--text);
+  transition: all 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--saddle);
+  box-shadow: 0 0 0 3px rgba(139, 94, 60, 0.1);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* Reservation Actions */
+.reservation-actions {
+  margin-top: 8px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+}
+
+.btn-reservation {
+  width: 100%;
+  padding: 18px 24px;
+  border-radius: 12px;
+  border: none;
+  background: linear-gradient(135deg, var(--espresso), var(--saddle));
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  box-shadow: 0 4px 16px rgba(59, 47, 47, 0.2);
+}
+
+.btn-reservation:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(59, 47, 47, 0.3);
+}
+
+.btn-reservation:active {
+  transform: translateY(0);
+}
+
+.btn-reservation:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Success Message */
+.reservation-success {
+  text-align: center;
+  padding: 40px 20px;
+  animation: fadeIn 0.5s ease-in;
+}
+
+.success-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 24px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #2d5a2d, #4a8a4a);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 24px rgba(45, 90, 45, 0.2);
+}
+
+.reservation-success h3 {
+  margin: 0 0 12px;
+  font-size: 24px;
+  color: var(--text);
+}
+
+.reservation-success p {
+  color: var(--muted);
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* Mobile Responsive */
+@media (max-width: 880px) {
+  .reservation-card {
+    padding: 28px 20px;
+    margin-top: 20px;
+  }
+
+  .reservation-header {
+    margin-bottom: 28px;
+    padding-bottom: 20px;
+  }
+
+  .reservation-form {
+    gap: 24px;
+  }
+
+  .time-slots {
+    grid-template-columns: repeat(auto-fill, minmax(85px, 1fr));
+    gap: 10px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .guest-selector {
+    gap: 12px;
+  }
+
+  .guest-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+
+  .guest-input {
+    width: 70px;
+    padding: 14px;
+    font-size: 18px;
   }
 }
